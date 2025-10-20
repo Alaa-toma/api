@@ -2,6 +2,8 @@ const search = document.querySelector(".search_box");
 const btn = document.querySelector(".search_btn");
 const show = document.querySelector(".show");
 
+console.log(`price = ${price} , title = ${title},  asc= ${asc}, desc=${desc}`);
+
 const v = btn.addEventListener('click', async () => {
     console.log(` search .value =  ${search.value}`);
         const response = await axios.get(`https://dummyjson.com/products/search?q=${search.value}`);
@@ -23,5 +25,5 @@ const v = btn.addEventListener('click', async () => {
     })
    show.innerHTML = m.join(" ");
 
-
 })
+
